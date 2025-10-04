@@ -142,6 +142,12 @@
             color: white;
         }
         
+        .btn-small {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            margin-right: 10px;
+        }
+        
         /* Theme Toggle */
         .theme-toggle {
             position: relative;
@@ -477,6 +483,79 @@
             border-radius: 4px;
         }
         
+        /* Projects Section */
+        .projects {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            background: var(--bg-primary);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .project-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .project-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-title {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        
+        .project-desc {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+        
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .tech-tag {
+            background: var(--card-bg);
+            color: var(--secondary);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 10px;
+        }
+        
         /* Education Section */
         .education {
             padding: 80px 0;
@@ -735,7 +814,7 @@
                 align-items: flex-start;
             }
             
-            .skills-grid, .cert-grid {
+            .skills-grid, .cert-grid, .projects-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -776,6 +855,7 @@
                         <li><a href="#about">About</a></li>
                         <li><a href="#experience">Experience</a></li>
                         <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
                         <li><a href="#education">Education</a></li>
                         <li><a href="#certifications">Certifications</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -974,6 +1054,122 @@
                         <div class="skill-level" style="width: 85%;"></div>
                     </div>
                     <p>Asset Management, Monitoring Systems, Surveillance, PABX</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x200" alt="Network Monitoring Dashboard" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Network Monitoring Dashboard</h3>
+                        <p class="project-desc">A comprehensive network monitoring solution built with Nagios and custom scripts to monitor network infrastructure, servers, and services in real-time.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Nagios</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Linux</span>
+                            <span class="tech-tag">Shell Scripting</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small btn-outline">Live Demo</a>
+                            <a href="#" class="btn btn-small">View Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x200" alt="Firewall Configuration Tool" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Firewall Configuration Tool</h3>
+                        <p class="project-desc">Automated firewall configuration tool for Sophos and Cisco firewalls that simplifies rule management and security policy deployment.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">API Integration</span>
+                            <span class="tech-tag">Security</span>
+                            <span class="tech-tag">Automation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small btn-outline">Live Demo</a>
+                            <a href="#" class="btn btn-small">View Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x200" alt="Virtualization Management System" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Virtualization Management System</h3>
+                        <p class="project-desc">Centralized management system for VMware and Hyper-V environments that streamlines VM provisioning, monitoring, and resource allocation.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">VMware</span>
+                            <span class="tech-tag">Hyper-V</span>
+                            <span class="tech-tag">PowerShell</span>
+                            <span class="tech-tag">Web Interface</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small btn-outline">Live Demo</a>
+                            <a href="#" class="btn btn-small">View Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x200" alt="Backup Solution" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Enterprise Backup Solution</h3>
+                        <p class="project-desc">Robust backup and disaster recovery solution for enterprise environments with automated scheduling and cloud integration.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Veeam</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Automation</span>
+                            <span class="tech-tag">Disaster Recovery</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small btn-outline">Live Demo</a>
+                            <a href="#" class="btn btn-small">View Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x200" alt="Network Security Analyzer" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Network Security Analyzer</h3>
+                        <p class="project-desc">Security analysis tool that scans network infrastructure for vulnerabilities and generates detailed reports with remediation suggestions.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Security</span>
+                            <span class="tech-tag">Nmap</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Reporting</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small btn-outline">Live Demo</a>
+                            <a href="#" class="btn btn-small">View Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x200" alt="IT Asset Management" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">IT Asset Management System</h3>
+                        <p class="project-desc">Comprehensive IT asset management solution that tracks hardware, software, and licenses across the organization with automated discovery.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Asset Management</span>
+                            <span class="tech-tag">Reporting</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small btn-outline">Live Demo</a>
+                            <a href="#" class="btn btn-small">View Code</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1182,4 +1378,55 @@
                     
                     // Close mobile menu if open
                     if (mainNav.classList.contains('active')) {
-                        mainNav.classList.remove
+                        mainNav.classList.remove('active');
+                        const icon = mobileMenuToggle.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                }
+            });
+        });
+
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = this.querySelector('input[type="text"]').value;
+            const email = this.querySelector('input[type="email"]').value;
+            const subject = this.querySelectorAll('input[type="text"]')[1].value;
+            const message = this.querySelector('textarea').value;
+            
+            // Here you would normally send the form data to a server
+            // For demo purposes, we'll just show a success message
+            alert(`Thank you for your message, ${name}! I'll get back to you soon.`);
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = 0;
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
