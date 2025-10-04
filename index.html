@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammad Hridoy - System Engineer Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -24,6 +25,7 @@
             --card-bg: #f8f9fa;
             --border-color: #e9ecef;
             --shadow: 0 5px 15px rgba(0,0,0,0.05);
+            --icon-bg: #f8f9fa;
         }
 
         [data-theme="dark"] {
@@ -43,6 +45,7 @@
             --card-bg: #1e1e1e;
             --border-color: #343a40;
             --shadow: 0 5px 15px rgba(0,0,0,0.3);
+            --icon-bg: #2d2d2d;
         }
         
         * {
@@ -511,10 +514,25 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
         
-        .project-img {
+        .project-icon-container {
             width: 100%;
             height: 200px;
-            object-fit: cover;
+            background: var(--icon-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .project-icon {
+            font-size: 5rem;
+            color: var(--secondary);
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover .project-icon {
+            transform: scale(1.1);
+            color: var(--primary);
         }
         
         .project-content {
@@ -974,7 +992,7 @@
                         <ul>
                             <li>Computing support to users regarding OS, Network/internet connectivity, Printer, hardware</li>
                             <li>Ensuring ERP systems are functioning properly and helping business run smoothly</li>
-                            <li>Configuration Router, Switch, Backup, and recovery of IT Equipment’s</li>
+                            <li>Configuration Router, Switch, Backup, and recovery of IT Equipment's</li>
                             <li>Active Directory, Network, Security monitoring</li>
                             <li>Install & Configure Router, ERP Installation, PABX & CCTV Systems</li>
                             <li>Asset & IT Store Management</li>
@@ -1065,7 +1083,9 @@
             <h2>Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <img src="https://via.placeholder.com/400x200" alt="Network Monitoring Dashboard" class="project-img">
+                    <div class="project-icon-container">
+                        <i class="bi bi-speedometer2 project-icon"></i>
+                    </div>
                     <div class="project-content">
                         <h3 class="project-title">Network Monitoring Dashboard</h3>
                         <p class="project-desc">A comprehensive network monitoring solution built with Nagios and custom scripts to monitor network infrastructure, servers, and services in real-time.</p>
@@ -1083,7 +1103,9 @@
                 </div>
                 
                 <div class="project-card">
-                    <img src="https://via.placeholder.com/400x200" alt="Firewall Configuration Tool" class="project-img">
+                    <div class="project-icon-container">
+                        <i class="bi bi-shield-lock project-icon"></i>
+                    </div>
                     <div class="project-content">
                         <h3 class="project-title">Firewall Configuration Tool</h3>
                         <p class="project-desc">Automated firewall configuration tool for Sophos and Cisco firewalls that simplifies rule management and security policy deployment.</p>
@@ -1101,7 +1123,9 @@
                 </div>
                 
                 <div class="project-card">
-                    <img src="https://via.placeholder.com/400x200" alt="Virtualization Management System" class="project-img">
+                    <div class="project-icon-container">
+                        <i class="bi bi-hdd-network project-icon"></i>
+                    </div>
                     <div class="project-content">
                         <h3 class="project-title">Virtualization Management System</h3>
                         <p class="project-desc">Centralized management system for VMware and Hyper-V environments that streamlines VM provisioning, monitoring, and resource allocation.</p>
@@ -1119,7 +1143,9 @@
                 </div>
                 
                 <div class="project-card">
-                    <img src="https://via.placeholder.com/400x200" alt="Backup Solution" class="project-img">
+                    <div class="project-icon-container">
+                        <i class="bi bi-cloud-arrow-down project-icon"></i>
+                    </div>
                     <div class="project-content">
                         <h3 class="project-title">Enterprise Backup Solution</h3>
                         <p class="project-desc">Robust backup and disaster recovery solution for enterprise environments with automated scheduling and cloud integration.</p>
@@ -1137,7 +1163,9 @@
                 </div>
                 
                 <div class="project-card">
-                    <img src="https://via.placeholder.com/400x200" alt="Network Security Analyzer" class="project-img">
+                    <div class="project-icon-container">
+                        <i class="bi bi-bug project-icon"></i>
+                    </div>
                     <div class="project-content">
                         <h3 class="project-title">Network Security Analyzer</h3>
                         <p class="project-desc">Security analysis tool that scans network infrastructure for vulnerabilities and generates detailed reports with remediation suggestions.</p>
@@ -1155,7 +1183,9 @@
                 </div>
                 
                 <div class="project-card">
-                    <img src="https://via.placeholder.com/400x200" alt="IT Asset Management" class="project-img">
+                    <div class="project-icon-container">
+                        <i class="bi bi-layers project-icon"></i>
+                    </div>
                     <div class="project-content">
                         <h3 class="project-title">IT Asset Management System</h3>
                         <p class="project-desc">Comprehensive IT asset management solution that tracks hardware, software, and licenses across the organization with automated discovery.</p>
